@@ -8,7 +8,7 @@ const LoadMore = () => {
   useEffect(() => {
     let timer = null;
     let winHeight = document.documentElement.clientHeight;
-    window.addEventListener("scroll", () => {
+    function scrollHandle() {
       if (more.current) {
         setLoadTop(more.current.getBoundingClientRect().top);
         if (timer) {
@@ -21,7 +21,12 @@ const LoadMore = () => {
           }, 300);
         }
       }
-    });
+    }
+    window.addEventListener("scroll", scrollHandle);
+    return () => {
+      window.removeEventListener("scroll", scrollHandle);
+      clearTimeout(timer);
+    };
   }, [loadTop]);
 
   return (

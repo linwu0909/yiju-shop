@@ -8,6 +8,7 @@ import User from "../pages/Main/User";
 import City from "../pages/City";
 import Search from "../pages/Search";
 import Details from "../pages/Details";
+import Login from "../pages/Login";
 
 import BottomNav from "../components/BottomNav";
 
@@ -17,6 +18,7 @@ const AppRouter = () => {
       <Switch>
         <Route path="/city" component={City}></Route>
         <Route path="/detail/:id" component={Details} />
+        <Route path="/login" component={Login} />
         <Route path="/search/:keywords" component={Search}></Route>
         <Layout path="/">
           <BottomNav />
