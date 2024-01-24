@@ -44,7 +44,7 @@ const DetailsView = (props) => {
           </div>
         </div>
       </div>
-      <BuyAndStore />
+      <BuyAndStore id={props.id} />
     </div>
   );
 };

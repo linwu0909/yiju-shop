@@ -18,7 +18,7 @@ const Details = (props) => {
   return (
     <div>
       {detailsData.imgs ? (
-        <DetailsView detailsData={detailsData} />
+        <DetailsView detailsData={detailsData} id={props.id} />
       ) : (
         <div>等待数据加载</div>
       )}
