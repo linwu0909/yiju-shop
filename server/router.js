@@ -4,6 +4,8 @@ const homehot = require("./data/home/homehot");
 const url = require("url");
 const searchData = require("./data/search");
 const detailsData = require("./data/details");
+const commentsData = require("./data/comment");
+const orderCommentData = require("./data/order");
 
 router.get("/home/hot1", (req, res) => {
   const cityName = url.parse(req.url, true).query.cityName;
@@ -50,6 +52,23 @@ router.post("/login", (req, res) => {
       msg: "用户名密码错误",
     });
   }
+});
+
+router.get("/comment", (req, res) => {
+  const id = url.parse(req.url).query.id;
+  res.send({
+    status: 200,
+    result: commentsData,
+  });
+});
+
+router.get("/order/comment", (req, res) => {
+  const username = url.parse(req.url, true).query.username;
+  const id = url.parse(req.url, true).query.id;
+  res.send({
+    status: 200,
+    result: orderCommentData,
+  });
 });
 
 module.exports = router;

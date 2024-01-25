@@ -9,6 +9,7 @@ import City from "../pages/City";
 import Search from "../pages/Search";
 import Details from "../pages/Details";
 import Login from "../pages/Login";
+import Order from "../pages/Order";
 
 import BottomNav from "../components/BottomNav";
 
@@ -20,6 +21,7 @@ const AppRouter = () => {
         <Route path="/detail/:id" component={Details} />
         <Route path="/login" component={Login} />
         <Route path="/search/:keywords" component={Search}></Route>
+        <Route path="/order" component={Order}></Route>
         <Layout path="/">
           <BottomNav />
           <Switch>

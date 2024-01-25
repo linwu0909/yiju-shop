@@ -8,6 +8,8 @@ const base = {
   search: "/api/search",
   details: "/api/details",
   login: "/api/login",
+  comment: "/api/comment",
+  commentOrder: "/api/order/comment",
 };
 
 const api = {
@@ -28,6 +30,12 @@ const api = {
   },
   login(params) {
     return axios.post(base.baseUrl + base.login, params);
+  },
+  comment(params) {
+    return axios.get(base.baseUrl + base.comment, { params });
+  },
+  commentOrder(params) {
+    return axios.get(base.baseUrl + base.commentOrder, { params });
   },
 };
 
