@@ -11,17 +11,17 @@ const HeaderNav = () => {
       <div className="home-header-left float-left">
         <Link to="/city">
           <span>{city.cityName}</span>
-          <i className="icon-angle-down"></i>
+          <i className="iconfont icon-angle-down"></i>
         </Link>
       </div>
       <div className="home-header-right float-right">
         <Link to="/order">
-          <i className="iconfont icon-car"></i>
+          <i className="iconfont icon-cart"></i>
         </Link>
       </div>
       <div className="home-header-middle">
         <div className="search-container">
-          <i className="icon-search"></i>
+          <i className="iconfont icon-search"></i>
           <SearchInput />
         </div>
       </div>

@@ -7,6 +7,7 @@ const Login = () => {
   const dispatch = useDispatch();
   function loginHandle(user) {
     dispatch(loginActions.setLogin(user));
+    localStorage.setItem("user", JSON.stringify(user));
     window.history.back();
   }
   return (

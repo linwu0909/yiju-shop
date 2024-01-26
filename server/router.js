@@ -71,4 +71,14 @@ router.get("/order/comment", (req, res) => {
   });
 });
 
+router.post("/order/submit/comment", (req, res) => {
+  // const username = url.parse(req.url, true).query.username;
+  // const id = url.parse(req.url, true).query.id;
+  const { username, id } = req.body;
+  res.send({
+    msg: "评价成功",
+    status: 200,
+  });
+});
+
 module.exports = router;

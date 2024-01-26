@@ -18,7 +18,7 @@ const OrderList = (props) => {
   return (
     <div>
       {orderListData.length > 0 ? (
-        <OrderListView data={orderListData} />
+        <OrderListView data={orderListData} user={props.user} />
       ) : (
         <div>等待数据加载</div>
       )}
